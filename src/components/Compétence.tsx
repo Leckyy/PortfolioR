@@ -14,6 +14,7 @@ const frameworks = [
   { titre: "React", tier: "aise" as const },
   { titre: "Tailwind CSS", tier: "aise" as const },
   { titre: "Node.js", tier: "aise" as const },
+  { titre: "Laravel", tier: "notions" as const },
 ]
 
 const outils = [
@@ -22,7 +23,10 @@ const outils = [
   { titre: "VS Code", tier: "solide" as const },
 ]
 
-const systemes = [{ titre: "Windows", tier: "solide" as const }]
+const systemes = [{ titre: "Windows", tier: "solide" as const },
+                  { titre: "Linux", tier: "notions" as const }
+
+]
 
 type Skill = { titre: string; tier: "solide" | "aise" | "notions" }
 

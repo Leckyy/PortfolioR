@@ -29,8 +29,8 @@ export const Projets = () => {
 
         <CardsProjets
           badge="Ecole"
-          Titre="Centre de Vacance"
-          description="Il y a plusieur utilisateur, les vacanciers et les animateurs . les vacanciers peuvent s'inscrire a une activite si il y a encore de la place et qu'elle est toujours disponible , peut aussi se desinscrire si l'activite a pas encore commencer et les animateurs peuvent ajouter une activite , supprimer une activiter  , peut aussi inscrire un vacancier dessus et le descincre "
+          Titre="Centres de Vacance"
+          description="Il y a plusieurs utilisateur, les vacanciers et les animateurs . les vacanciers peuvent s'inscrire a une activite si il y a encore de la place et qu'elle est toujours disponible , peut aussi se desinscrire si l'activite a pas encore commencer et les animateurs peuvent ajouter une activite , supprimer une activiter  , peut aussi inscrire un vacancier dessus et le descincre "
           tags={["HTML", "CSS", "PHP", "SQL" , "MYSQL" , "javascript"]}
         />
 

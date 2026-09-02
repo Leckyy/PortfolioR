@@ -47,9 +47,10 @@ export const CardsProjets: React.FC<DESCardsprojets> = ({
       <div className="border-t border-neutral-800 mb-4" />
 
       {/* Footer: CTA */}
-      <div className="flex items-center justify-center">
+      
+      {/* <div className="flex items-center justify-center">
         <span className="text-sm font-medium ">View Details</span>
-      </div>
+      </div> */}
     </a>
   )
 }
