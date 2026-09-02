@@ -15,7 +15,11 @@ export const Navbar = () => {
 
   return (
     <header className="nav-shell fixed inset-x-0 top-0 z-20">
-      <nav className="flex w-full items-center justify-end px-6 py-4" aria-label="Navigation principale">
+      <nav className="flex w-full items-center justify-between px-6 py-4" aria-label="Navigation principale">
+        <a className="nav-logo" href="#accueil" onClick={closeMenu}>
+          Portfolio
+        </a>
+
         <button
           type="button"
           className="nav-menu-button md:hidden"
