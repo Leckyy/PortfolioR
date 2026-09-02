@@ -7,10 +7,10 @@ function App() {
    <div>
      <Navbar/>
    
-  <div id="accueil" className="flex flex-col md:flex-row min-h-screen w-full items-center overflow-hidden bg-midnight pt-14">
+  <div id="accueil" className="relative flex flex-col md:flex-row min-h-screen w-full items-center overflow-hidden bg-midnight pt-14 md:h-[calc(100vh-3.5rem)] md:min-h-0 md:items-stretch">
   
   
-  <div className="hero-copy flex-1 flex flex-col justify-center items-start p-8 md:p-16 bg-midnight h-full">
+  <div className="hero-copy flex-1 flex flex-col justify-center items-start p-8 md:w-1/2 md:flex-none md:p-16 bg-midnight h-full">
     <h1 className="text-5xl font-bold text-white tracking-tight hover:scale-105 transition-transform duration-300 cursor-default">
       <span className="text-coral">AURIAT</span> Tristan
     </h1>
@@ -23,12 +23,12 @@ function App() {
   </div>
 
   
-  <div className="hero-visual flex-1 flex justify-center items-center p-8 bg-midnight h-full">
-    <div className="hero-photo-wrap">
+  <div className="hero-visual flex-1 flex justify-center items-center px-8 pt-8 bg-midnight h-full md:w-1/2 md:flex-none md:items-end md:px-8 md:pt-8 md:pb-0">
+    <div className="hero-photo-wrap md:absolute md:right-0 md:bottom-0">
       <img 
         src="img/photo.png" 
         alt="Photo de Tristan Auriat" 
-        className="hero-photo max-h-[70vh] relative"
+        className="hero-photo block h-auto w-auto relative md:w-[min(65vw,700px)] md:max-w-none"
       />
       
       <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
