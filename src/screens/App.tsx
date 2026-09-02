@@ -7,7 +7,7 @@ function App() {
    <div>
      <Navbar/>
    
-  <div id="accueil" className="relative flex flex-col md:flex-row min-h-screen w-full items-center overflow-hidden bg-midnight pt-14 md:h-[calc(100vh-3.5rem)] md:min-h-0 md:items-stretch">
+  <div id="accueil" className="relative flex flex-col md:flex-row min-h-0 w-full items-center overflow-hidden bg-midnight pt-14 md:h-[calc(100vh-3.5rem)] md:items-stretch">
   
   
   <div className="hero-copy flex-1 flex flex-col justify-center items-start p-8 md:w-1/2 md:flex-none md:p-16 bg-midnight h-full">
