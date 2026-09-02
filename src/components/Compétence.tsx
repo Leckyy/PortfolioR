@@ -17,7 +17,7 @@ const frameworks = [
 ]
 
 const outils = [
-  { titre: "Git", tier: "notion" as const },
+  { titre: "Git", tier: "notions" as const },
   { titre: "MySQL", tier: "aise" as const },
   { titre: "VS Code", tier: "solide" as const },
 ]
