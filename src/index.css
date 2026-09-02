@@ -1,8 +1,311 @@
 @import "tailwindcss";
 
 @theme {
-  --color-midnight: #010814;
-  --color-Atlantic: #151130;
-  --color-Atlantic2: #c8befa;
+  --color-midnight: #08111f;
+  --color-Atlantic: #0d1b2a;
+  --color-Atlantic2: #13283a;
+  --color-coral: #ff8066;
+  --color-mint: #5eead4;
+}
 
+
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #e6f1f5;
+  background: #08111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #08111f;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float-photo {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-6px) rotate(-.5deg); }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(.985) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes description-appear {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photo-appear {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.hero-description {
+  animation: description-appear 1.5s .45s cubic-bezier(.16, 1, .3, 1) both;
+  will-change: opacity, transform;
+}
+
+.hero-photo-wrap {
+  animation: photo-appear 1.5s .15s cubic-bezier(.16, 1, .3, 1) both;
+  will-change: opacity, transform;
+}
+
+.hero-photo {
+  animation: float-photo 7s ease-in-out infinite;
+  filter: drop-shadow(0 3px 8px rgb(0 0 0 / .04));
+  transition: filter .5s ease;
+}
+
+.hero-visual:hover .hero-photo {
+  filter: drop-shadow(0 4px 9px rgb(0 0 0 / .06));
+}
+
+.project-card {
+  background: linear-gradient(145deg, #13283a, #0d1b2a);
+  border-color: #24445a;
+  box-shadow: 0 4px 14px rgb(0 0 0 / .12);
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1), border-color .4s ease, background .4s ease, box-shadow .4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff8066;
+  background: linear-gradient(145deg, #173247, #102237);
+  box-shadow: 0 9px 22px rgb(0 0 0 / .18);
+}
+
+.project-button {
+  color: #08111f;
+  background: #5eead4;
+  transition: background-color .35s ease, transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s ease;
+}
+
+.project-button:hover {
+  background: #ff8066;
+  transform: translateY(-1px) scale(1.015);
+}
+
+.modal-panel {
+  border-color: #31536a;
+  box-shadow: 0 12px 32px rgb(0 0 0 / .26);
+  animation: modal-in .5s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.modal-backdrop {
+  background: rgb(3 10 18 / .78);
+  backdrop-filter: blur(8px);
+  animation: backdrop-in .3s ease-out both;
+}
+
+.modal-close {
+  color: #8ca8b8;
+  background: #0d1b2a;
+  transition: color .3s ease, background-color .3s ease, transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.modal-close:hover {
+  color: #08111f;
+  background: #ff8066;
+  transform: rotate(90deg);
+}
+
+.modal-badge {
+  color: #ff8066;
+}
+
+.modal-description {
+  color: #c1d2da;
+}
+
+.modal-tag {
+  color: #a7f3e8;
+  background: #0d1b2a;
+  border: 1px solid #285063;
+}
+
+.nav-shell {
+  background: rgb(8 17 31 / .82);
+  border-bottom: 1px solid rgb(94 234 212 / .12);
+  backdrop-filter: blur(14px);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  color: #f5fbfc;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  transition: color .3s ease;
+}
+
+.nav-logo:hover {
+  color: #5eead4;
+}
+
+.nav-logo-mark {
+  display: grid;
+  width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  color: #08111f;
+  background: #ff8066;
+  border-radius: .65rem;
+  font-size: .72rem;
+  letter-spacing: -.04em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.nav-link {
+  position: relative;
+  padding: .35rem 0;
+  color: #9eb6c2;
+  font-size: .86rem;
+  font-weight: 600;
+  transition: color .3s ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: #5eead4;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #f5fbfc;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-menu-button {
+  display: none;
+  margin-left: auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-content: center;
+  gap: .35rem;
+  border: 1px solid #31536a;
+  border-radius: .6rem;
+  background: #0d1b2a;
+}
+
+.nav-bar {
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  background: #5eead4;
+  transition: transform .3s ease;
+}
+
+@media (max-width: 767px) {
+  .nav-menu-button {
+    display: grid;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .25rem;
+    padding: .75rem;
+    border: 1px solid #24445a;
+    border-radius: .8rem;
+    background: #0d1b2a;
+    box-shadow: 0 18px 40px rgb(0 0 0 / .28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity .3s ease, transform .35s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .nav-links-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    padding: .75rem .8rem;
+    border-radius: .45rem;
+  }
+
+  .nav-link:hover {
+    background: #13283a;
+  }
+
+  .nav-link::after {
+    right: .8rem;
+    bottom: .4rem;
+    left: .8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
 }

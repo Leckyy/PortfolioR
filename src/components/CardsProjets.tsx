@@ -1,24 +1,28 @@
 import type React from "react"
+import type { Projet } from "./Modal"
 
 type DESCardsprojets = {
   badge: string
   Titre: string
+  resume: string
   description: string
   tags: string[]
   href?: string
+  onDetails: (projet: Projet) => void
 }
 
 export const CardsProjets: React.FC<DESCardsprojets> = ({
   badge,
   Titre,
+  resume,
   description,
   tags,
-  href = "#",
+  onDetails,
 }) => {
   return (
-    <a
-      href={href}
-      className="flex flex-col bg-Atlantic2 border border-neutral-800 rounded-xl p-6 w-full max-w-sm hover:border-neutral-700 transition-colors"
+    
+    <div 
+    className="project-card flex flex-col border rounded-xl p-6 w-full max-w-sm"
     >
       {/* Badge */}
       <div className="flex justify-end mb-6">
@@ -29,7 +33,7 @@ export const CardsProjets: React.FC<DESCardsprojets> = ({
 
       {/* Title + description */}
       <h3 className="text-lg font-semibold  text-center mb-3">{Titre}</h3>
-      <p className="text-sm  text-center leading-relaxed mb-5">{description}</p>
+      <p className="text-sm  text-center leading-relaxed mb-5">{resume}</p>
 
       {/* Tags */}
       <div className="flex flex-wrap justify-center gap-2 mb-5">
@@ -47,10 +51,12 @@ export const CardsProjets: React.FC<DESCardsprojets> = ({
       <div className="border-t border-neutral-800 mb-4" />
 
       {/* Footer: CTA */}
-      
-      {/* <div className="flex items-center justify-center">
-        <span className="text-sm font-medium ">View Details</span>
-      </div> */}
-    </a>
+
+      <div className="flex items-center justify-center">
+        <button className="project-button rounded-md px-4 py-2" onClick={() => onDetails({ badge, Titre, description, tags })}>
+          <span className="text-sm font-medium">Voir les détails</span>
+        </button>
+      </div>
+    </div>
   )
 }

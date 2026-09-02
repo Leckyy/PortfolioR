@@ -1,27 +1,47 @@
 
+import type { CSSProperties } from "react"
+import { useState } from "react"
 
+const links = [
+  { label: "Accueil", href: "#accueil" },
+  { label: "Compétences", href: "#competences" },
+  { label: "Mes projets", href: "#projets" },
+]
 
 export const Navbar = () => {
-  return (
-    <div>
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    
-<nav className="bg-black fixed w-full z-20 top-0  border-b border-default py-2">
-    <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-        <li>
-          <a href="#" className="block py-2 px-3 text-white bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Accueil</a>
-        </li>
-        <li>
-          <a href="#competence" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent text-white">Compétence</a>
-        </li>
-        <li>
-          <a href="#projets" className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent text-white">Mes Projets</a>
-        </li>
-      </ul>
-    </div>
-</nav>
-</div>     
-       
+  const closeMenu = () => setMenuOpen(false)
+
+  return (
+    <header className="nav-shell fixed inset-x-0 top-0 z-20">
+      <nav className="flex w-full items-center justify-end px-6 py-4" aria-label="Navigation principale">
+        <button
+          type="button"
+          className="nav-menu-button md:hidden"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+        >
+          <span className={menuOpen ? "nav-bar rotate-45 translate-y-1" : "nav-bar"} />
+          <span className={menuOpen ? "nav-bar -rotate-45 -translate-y-1" : "nav-bar"} />
+        </button>
+
+        <div id="main-navigation" className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
+          {links.map((link, index) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="nav-link"
+              style={{ "--link-index": index } as CSSProperties}
+              onClick={closeMenu}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
   )
 }
