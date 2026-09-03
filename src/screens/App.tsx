@@ -1,4 +1,5 @@
  import { Navbar } from "../components/Navbar"
+  import { APropos } from "../components/APropos"
   import { Compétence } from "../components/Compétence"
   import { Projets} from "../components/Projets"
 
@@ -37,6 +38,7 @@ function App() {
 
 </div>
 
+  <APropos/>
     <Compétence/>
     
 
