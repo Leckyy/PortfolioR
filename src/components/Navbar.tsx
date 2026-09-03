@@ -7,6 +7,7 @@ const links = [
   { label: "À propos", href: "#a-propos" },
   { label: "Compétences", href: "#competences" },
   { label: "Mes projets", href: "#projets" },
+  { label: "Contact", href: "#contact" },
 ]
 
 export const Navbar = () => {

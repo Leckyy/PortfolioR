@@ -2,6 +2,7 @@
   import { APropos } from "../components/APropos"
   import { Compétence } from "../components/Compétence"
   import { Projets} from "../components/Projets"
+  import { Contact } from "../components/Contact"
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
     
 
       <Projets/>
+
+      <Contact/>
 
     
 
