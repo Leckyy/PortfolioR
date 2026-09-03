@@ -1,6 +1,6 @@
 export const APropos = () => {
   return (
-    <section id="a-propos" className="bg-Atlantic px-6 py-20 sm:px-12 lg:px-20">
+    <section id="a-propos" className="bg-slate-900 px-6 py-20 sm:px-12 lg:px-20">
       <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-start">
         <div>
           {/* <p className="mb-3 font-mono text-sm text-mint">Mon parcours</p> */}
