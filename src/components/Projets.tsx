@@ -103,7 +103,21 @@ Le projet met en œuvre un système de gestion des utilisateurs, des activités 
           badge="Perso"
           Titre="CRUD Node JS"
           resume="Une application de connexion créée pour apprendre le CRUD avec Node.js."
-          description="une application de connexion a un formulaire pour apprendre le CRUD de node JS"
+          description="Développement d’une application web intégrant un système d’authentification et un formulaire de gestion de données, réalisée avec Node.js afin de mettre en pratique les opérations CRUD.
+
+Fonctionnalités principales :
+
+Création et gestion de comptes utilisateurs.
+Système de connexion et d’authentification.
+Formulaire permettant d’ajouter et de gérer des données.
+Mise en œuvre des opérations CRUD :
+Création de données.
+Consultation des données.
+Modification des données.
+Suppression des données.
+Gestion des requêtes et des données côté serveur avec Node.js.
+
+Le projet a permis d’approfondir la maîtrise du développement back-end avec Node.js, de la gestion des formulaires et des opérations CRUD."
           tags={["Node JS", "Express JS", "Tailwind CSS"]}
           onDetails={setProjetSelectionne}
         />

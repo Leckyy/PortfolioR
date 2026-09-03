@@ -28,7 +28,7 @@ function App() {
       <img 
         src="img/photo.png" 
         alt="Photo de Tristan Auriat" 
-        className="hero-photo block h-auto w-auto relative md:w-[min(65vw,700px)] md:max-w-none"
+        className="hero-photo block h-auto w-auto relative md:w-[min(70vw,760px)] md:max-w-none"
       />
       
       <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
