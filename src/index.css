@@ -17,6 +17,15 @@
   text-rendering: optimizeLegibility;
 }
 
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 5rem;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -39,6 +48,17 @@ button {
 @keyframes reveal-up {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.16, 1, .3, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes float-photo {

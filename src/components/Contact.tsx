@@ -1,6 +1,6 @@
 export const Contact = () => {
   return (
-    <section id="contact" className="bg-midnight px-6 py-20 sm:px-12 lg:px-20">
+    <section id="contact" className="scroll-reveal bg-midnight px-6 py-20 sm:px-12 lg:px-20">
       <div className="mx-auto max-w-5xl text-center">
         <p className="mb-3 font-mono text-sm text-mint">Échangeons</p>
         <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">Contact</h2>

@@ -67,7 +67,7 @@ export const Compétence = () => {
   return (
     <section
       id="competences"
-      className="px-6 sm:px-12 py-24 bg-slate-900 border-t border-zinc-900"
+      className="scroll-reveal border-t border-zinc-900 bg-slate-900 px-6 py-24 sm:px-12"
     >
       <h2 className="text-3xl font-bold text-white mb-15 text-center ">
         Compétences techniques

@@ -6,7 +6,7 @@ export const Projets = () => {
   const [projetSelectionne, setProjetSelectionne] = useState<Projet | null>(null)
 
   return (
-    <section id="projets" className="bg-slate-900 py-20">
+    <section id="projets" className="scroll-reveal bg-slate-900 py-20">
       <div className="max-w-5xl mx-auto text-center mb-14">
         <h2 className="text-4xl font-bold text-white mb-4">Mes projets</h2>
         <div className="w-16 h-0.5 bg-neutral-700 mx-auto mb-5" />

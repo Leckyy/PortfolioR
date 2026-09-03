@@ -1,5 +1,5 @@
 
-import type { CSSProperties } from "react"
+import type { CSSProperties, MouseEvent } from "react"
 import { useState } from "react"
 
 const links = [
@@ -15,10 +15,27 @@ export const Navbar = () => {
 
   const closeMenu = () => setMenuOpen(false)
 
+  const handleNavigation = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault()
+    closeMenu()
+
+    const target = document.querySelector(href)
+    if (!target) {
+      return
+    }
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+
+    window.history.pushState(null, "", href)
+  }
+
   return (
     <header className="nav-shell fixed inset-x-0 top-0 z-20">
       <nav className="flex w-full items-center justify-between px-6 py-4" aria-label="Navigation principale">
-        <a className="nav-logo" href="#accueil" onClick={closeMenu}>
+        <a className="nav-logo" href="#accueil" onClick={(event) => handleNavigation(event, "#accueil")}>
           Portfolio
         </a>
 
@@ -41,7 +58,7 @@ export const Navbar = () => {
               href={link.href}
               className="nav-link"
               style={{ "--link-index": index } as CSSProperties}
-              onClick={closeMenu}
+              onClick={(event) => handleNavigation(event, link.href)}
             >
               {link.label}
             </a>
