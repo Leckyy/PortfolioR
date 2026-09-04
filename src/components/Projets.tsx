@@ -122,6 +122,72 @@ Le projet a permis d’approfondir la maîtrise du développement back-end avec 
           onDetails={setProjetSelectionne}
         />
 
+
+
+        <CardsProjets
+          badge="Perso"
+          Titre="Candi-Tracker"
+          resume="Candi-Tracker est une application personnelle de suivi des candidatures. Elle permet d’enregistrer les offres trouvées sur différents sites, de conserver leurs informations dans une base locale, puis de suivre leur état jusqu’à une éventuelle relance ou réponse."
+
+
+          description="Le projet est composé de deux parties principales :
+
+1. L’application web
+Accessible avec http://localhost:4173, elle permet de :
+
+consulter toutes les candidatures ;
+ajouter ou modifier une candidature ;
+enregistrer l’entreprise, le poste et le profil recherché ;
+préciser le type de contrat, le lieu et le moyen utilisé ;
+ajouter des notes personnelles ;
+modifier le statut : envoyée, relancée, entretien, refusée, acceptée, etc. ;
+rechercher une candidature ;
+filtrer par statut, moyen, contrat et période ;
+trier par date ou par entreprise ;
+afficher une pastille À relancer après 5 jours sans réponse ;
+exporter les candidatures au format PDF.
+2. L’extension de navigateur
+L’extension fonctionne avec Chrome ou Edge. Elle ajoute un bouton sur certains sites d’emploi comme :
+
+Indeed ;
+HelloWork ;
+LinkedIn ;
+Apec ;
+France Travail ;
+Welcome to the Jungle.
+Elle peut aussi être utilisée sur d’autres sites grâce au clic droit :
+
+Clic droit → Sauver cette offre
+
+L’extension récupère automatiquement certaines informations de la page :
+
+nom de l’entreprise ;
+intitulé du poste ;
+lieu ;
+type de contrat ;
+site d’origine ;
+lien de l’offre.
+Les informations peuvent ensuite être corrigées avant l’enregistrement. Le formulaire conserve également un brouillon local si l’utilisateur quitte la page avant de terminer.
+
+
+L’utilisateur consulte une offre d’emploi.
+Il clique sur le bouton de l’extension ou utilise le clic droit.
+L’extension extrait les informations disponibles.
+L’utilisateur vérifie ou complète le formulaire.
+L’extension envoie les données au serveur local.
+Le serveur enregistre la candidature dans SQLite.
+La candidature apparaît dans le tableau de suivi.
+Les filtres, les tris et les pastilles permettent ensuite de suivre les candidatures.
+Les données peuvent être exportées dans un PDF pour France Travail ou pour l’école.
+Le projet fonctionne principalement en local sur l’ordinateur. Le serveur doit être démarré avec npm start pour que l’extension puisse enregistrer les candidatures.
+
+
+
+"
+          tags={["HTML", "CSS", "JavaScript", "Node.js" , "Express" , "better-sqlite3","PDFKit","CORS","JSON","SQL / SQLite","better-sqlite3","better-sqlite3","better-sqlite3","better-sqlite3"]}
+          onDetails={setProjetSelectionne}
+        />
+
         
 
 
