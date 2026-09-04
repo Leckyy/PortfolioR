@@ -17,7 +17,7 @@ export const Contact = () => {
               const composeWindow = window.open(
                 event.currentTarget.href,
                 "gmail-compose",
-                "width=900,height=700,resizable=yes,scrollbars=yes",
+                "width=520,height=620,resizable=yes,scrollbars=yes",
               )
 
               if (composeWindow) {
