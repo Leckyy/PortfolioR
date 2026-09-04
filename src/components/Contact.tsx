@@ -11,7 +11,9 @@ export const Contact = () => {
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
           <a
-            href="mailto:tristan.auriat.job@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=tristan.auriat.job@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="project-button rounded-md px-5 py-3 text-sm font-semibold"
           >
             M&apos;écrire par email
