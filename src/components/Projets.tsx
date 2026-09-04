@@ -184,7 +184,7 @@ Le projet fonctionne principalement en local sur l’ordinateur. Le serveur doit
 
 
 "
-          tags={["HTML", "CSS", "JavaScript", "Node.js" , "Express" , "better-sqlite3","PDFKit","CORS","JSON","SQL / SQLite","better-sqlite3","better-sqlite3","better-sqlite3","better-sqlite3"]}
+          tags={["HTML", "CSS", "JavaScript", "Node.js" , "Express" , "better-sqlite3","PDFKit","CORS","JSON","SQL / SQLite"]}
           onDetails={setProjetSelectionne}
         />
 
