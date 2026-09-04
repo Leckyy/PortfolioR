@@ -157,7 +157,7 @@ France Travail ;
 Welcome to the Jungle.
 Elle peut aussi être utilisée sur d’autres sites grâce au clic droit :
 
-Clic droit → Sauver cette offre
+Clic droit → Sauvegarder cette offre
 
 L’extension récupère automatiquement certaines informations de la page :
 
@@ -168,20 +168,6 @@ type de contrat ;
 site d’origine ;
 lien de l’offre.
 Les informations peuvent ensuite être corrigées avant l’enregistrement. Le formulaire conserve également un brouillon local si l’utilisateur quitte la page avant de terminer.
-
-
-L’utilisateur consulte une offre d’emploi.
-Il clique sur le bouton de l’extension ou utilise le clic droit.
-L’extension extrait les informations disponibles.
-L’utilisateur vérifie ou complète le formulaire.
-L’extension envoie les données au serveur local.
-Le serveur enregistre la candidature dans SQLite.
-La candidature apparaît dans le tableau de suivi.
-Les filtres, les tris et les pastilles permettent ensuite de suivre les candidatures.
-Les données peuvent être exportées dans un PDF pour France Travail ou pour l’école.
-Le projet fonctionne principalement en local sur l’ordinateur. Le serveur doit être démarré avec npm start pour que l’extension puisse enregistrer les candidatures.
-
-
 
 "
           tags={["HTML", "CSS", "JavaScript", "Node.js" , "Express" , "better-sqlite3","PDFKit","CORS","JSON","SQL / SQLite"]}
